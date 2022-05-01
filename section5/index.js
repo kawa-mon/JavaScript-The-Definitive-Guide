@@ -28,15 +28,15 @@ for (let [k, v] of Object.entries(o)) {
 console.log(pairs)
 
 // ES6では文字列も反復可能
-let freequecy = {}
+let frequency = {}
 for (let letter of 'mississippi') {
-  if (freequecy[letter]) {
-    freequecy[letter]++
+  if (frequency[letter]) {
+    frequency[letter]++
   } else {
-    freequecy[letter] = 1
+    frequency[letter] = 1
   }
 }
-console.log(freequecy)
+console.log(frequency)
 
 // Set も反復可能
 let text = 'Na na na na na na na na na Batman!'

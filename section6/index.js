@@ -74,7 +74,7 @@ console.log(square2.area())
 /**
  * ゲッター・セッター
  */
-const serialnum = {
+const serialNum = {
   _n: 0,
   get next() {
     return this._n++
@@ -87,7 +87,7 @@ const serialnum = {
     }
   },
 }
-serialnum.next = 10
-console.log(serialnum.next)
-console.log(serialnum.next)
-serialnum.next = 5
+serialNum.next = 10
+console.log(serialNum.next)
+console.log(serialNum.next)
+serialNum.next = 5
