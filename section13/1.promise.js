@@ -11,7 +11,7 @@
 /**
  * 基本形
  * promiseオブジェクトがresolveもしくはrejectされた時の処理を then() メソッド内部に記述する。
- * fetch関数 内でpromiseオブジェクトがresolveされると、値と共に then() の第一引数に指定した関数が呼ばれる。
+ * promiseオブジェクトがresolveされると、値と共に then() の第一引数に指定した関数が呼ばれる。
  * rejectされる場合は then() の第二引数に指定した関数が呼ばれる。
  *
  * なお、promiseオブジェクトの状態は、一度PendingからFulfilledやRejectedになると、 そのpromiseオブジェクトの状態はそれ以降変化することはない。
@@ -37,18 +37,18 @@ Promise.resolve()
  *   then() の返した Promise(p1) は resolved にはなるが fulfilled にはならない。
  *   P2 が fulfilled になると、p2 と同じ値で p1 も fulfilled になる。
  *   p2 が rejected になると、p2 と同じ値で p1 も rejected になる。
- * @see https://ja.javascript.info/promise-chaining#ref-188
+ * @see https://ja.javascript.info/promise-chaining#ref-1889
  */
 // 1. then() に渡すコールバック関数が Promise 以外の値を返すとき
-Promise.resolve(2)
-  .then((resolve) => {
+Promise.resolve()
+  .then(() => {
     setTimeout(() => {
-      console.log('Promise 返さない then1：', resolve * 2)
+      console.log('Promise 返さない then1')
     }, 2000)
   })
-  .then((resolve) => {
+  .then(() => {
     setTimeout(() => {
-      console.log('Promise 返さない then2：', resolve * 2)
+      console.log('Promise 返さない then2')
     }, 1000)
   })
 
